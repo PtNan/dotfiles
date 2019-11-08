@@ -1,0 +1,45 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": [
+        "go",
+        "json",
+        "rust",
+        "vue",
+        "javascript",
+        "python",
+    ],
+
+    "tabnine.priority": 1000,
+    "coc.source.word.priority": 5,
+
+    "yank.limit": 50,
+    "yank.enableCompletion": false,
+    "git.addGBlameToVirtualText": true,
+
+    "explorer.icon.enableNerdfont": true,
+
+    "vetur.format.defaultFormatter.js": "vscode-typescript",
+    "vetur.format.defaultFormatterOptions": {
+        "js-beautify-html": {
+            "wrap_attributes": "force-expand-multiline"
+        },
+        "prettyhtml": {
+            "printWidth": 100,
+            "singleQuote": true,
+            "wrapAttributes": false,
+            "sortAttributes": false
+        },
+        "prettier": {
+        "semi": false,
+        "singleQuote": true
+    }
+    },
+
+    "python.jediEnabled": false,
+
+    "go.goplsOptions": {
+        "completeUnimported": true,
+        "deepCompletion": true,
+        "hoverKind": "FullDocumentation",
+        "usePlaceholders": true
+    }
+}
