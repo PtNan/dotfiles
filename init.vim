@@ -115,15 +115,13 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
-Plug 'PtNan/ayu-gruvbox'
+Plug 'PtNan/ayu-vim'
 
 " Plug
 Plug 'neoclide/coc-imselect'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'scrooloose/nerdcommenter'
 Plug 'luochen1990/rainbow'
 Plug 'dylanaraps/root.vim'
 Plug 'tpope/vim-commentary'
