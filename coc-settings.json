@@ -1,4 +1,5 @@
 {
+    "suggest.noselect": false,
     "coc.preferences.formatOnSaveFiletypes": [
         "go",
         "json",
@@ -8,8 +9,8 @@
         "python",
     ],
 
-    "tabnine.priority": 1000,
-    "coc.source.word.priority": 5,
+    "tabnine.priority": 100,
+    "coc.source.word.priority": 1,
 
     "yank.limit": 50,
     "yank.enableCompletion": false,

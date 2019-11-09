@@ -149,6 +149,7 @@ nnoremap <Leader>cc :PlugClean<CR>
 " coc.nvim
 " au
 au CursorHold * silent call CocActionAsync('highlight')
+au! CompleteDone * if pumvisible() == 0 | pclose | endif
 " common
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> gd <Plug>(coc-definition)
@@ -167,12 +168,12 @@ function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 " hover
 nnoremap <silent> gh :call <SID>show_documentation()<CR>
 function! s:show_documentation()
@@ -192,7 +193,7 @@ function! s:GrepArgs(...)
   return join(list, "\n")
 endfunction
 command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
-vnoremap <leader>g :<C-u>call <SID>GrepFromSelected(visualmode())<CR>
+vnoremap <leader>w :<C-u>call <SID>GrepFromSelected(visualmode())<CR>
 function! s:GrepFromSelected(type)
   let saved_unnamed_register = @@
   if a:type ==# 'v'
