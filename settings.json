@@ -44,7 +44,7 @@
         {
             "before": [
                 "]",
-                "c"
+                "d"
             ],
             "commands": [
                 "editor.action.marker.nextInFiles"
@@ -53,7 +53,7 @@
         {
             "before": [
                 "[",
-                "c"
+                "d"
             ],
             "commands": [
                 "editor.action.marker.prevInFiles"
@@ -74,7 +74,7 @@
                 "g"
             ],
             "commands": [
-                "workbench.action.editor.previouschange"
+                "workbench.action.editor.previousChange"
             ]
         },
         {
@@ -169,14 +169,14 @@
     "go.useLanguageServer": true,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    "editor.fontFamily": "SF Mono",
+    "editor.fontFamily": "SFMono Nerd Font",
     "extensions.ignoreRecommendations": true,
     "workbench.colorCustomizations": {
         "statusBar.background": "#005f5f",
         "statusBar.noFolderBackground": "#005f5f",
         "statusBar.debuggingBackground": "#005f5f"
     },
-    "workbench.colorTheme": "One Dark Pro",
+    "workbench.colorTheme": "Gruvbox Light (Soft)",
     "workbench.iconTheme": "material-icon-theme",
     "git.enableSmartCommit": true,
     "window.zoomLevel": 0,

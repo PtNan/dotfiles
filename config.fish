@@ -8,6 +8,7 @@ set -Ux EDITOR nvim
 alias v     'nvim'
 alias g     'git'
 alias ga    'git add -A'
+alias gb    'git branch'
 alias gch   'git checkout'
 alias gcl   'git clone'
 alias gca   'git add -A && git commit -v -a'

@@ -20,15 +20,6 @@
 
     "vetur.format.defaultFormatter.js": "vscode-typescript",
     "vetur.format.defaultFormatterOptions": {
-        "js-beautify-html": {
-            "wrap_attributes": "force-expand-multiline"
-        },
-        "prettyhtml": {
-            "printWidth": 100,
-            "singleQuote": true,
-            "wrapAttributes": false,
-            "sortAttributes": false
-        },
         "prettier": {
         "semi": false,
         "singleQuote": true
