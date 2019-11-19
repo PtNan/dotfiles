@@ -115,7 +115,7 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
-Plug 'PtNan/ayu-vim'
+Plug 'phanviet/vim-monokai-pro'
 
 " Plug
 Plug 'neoclide/coc-imselect'
@@ -135,10 +135,7 @@ call plug#end()
 
 
 " scheme
-" colorscheme gruvbox
-let ayucolor="light"
-colorscheme ayu
-" let g:gruvbox_contrast_dark ="soft"
+colorscheme monokai_pro
 
 
 " Plugin Config
@@ -226,7 +223,7 @@ let g:indentLine_setConceal = 0
 
 " lightline.vim
 let g:lightline = {
-    \  'colorscheme': 'ayu',
+    \  'colorscheme': 'monokai_pro',
     \  'active': {
     \    'left': [
     \      [ 'mode', 'paste' ],
