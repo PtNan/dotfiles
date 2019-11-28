@@ -23,15 +23,6 @@
         },
         {
             "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<ESC>"
-            ]
-        },
-        {
-            "before": [
                 "leader",
                 "leader"
             ],
@@ -97,26 +88,6 @@
         },
         {
             "before": [
-                "n"
-            ],
-            "after": [
-                "n",
-                "z",
-                "z"
-            ]
-        },
-        {
-            "before": [
-                "n"
-            ],
-            "after": [
-                "n",
-                "z",
-                "z"
-            ]
-        },
-        {
-            "before": [
                 "k"
             ],
             "after": [
@@ -176,9 +147,17 @@
         "statusBar.noFolderBackground": "#005f5f",
         "statusBar.debuggingBackground": "#005f5f"
     },
-    "workbench.colorTheme": "Gruvbox Light (Soft)",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "Monokai Pro Icons",
     "git.enableSmartCommit": true,
     "window.zoomLevel": 0,
-    "http.proxy": "http://127.0.0.1:1087"
+    "http.proxy": "http://127.0.0.1:1087",
+    "workbench.colorTheme": "Monokai Pro",
+    "terminal.external.osxExec": "iTerm.app",
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
 }

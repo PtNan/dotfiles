@@ -80,6 +80,10 @@ nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
 nnoremap <silent> * *zz
 nnoremap <silent> # #zz
+" nnoremap <silent> j jzz
+" nnoremap <silent> k kzz
+nnoremap <silent> j gj
+nnoremap <silent> k gk
 nnoremap <silent> g* g*zz
 nnoremap <silent> <BS> :noh<CR>
 vnoremap < <gv
@@ -269,3 +273,4 @@ let g:NERDTrimTrailingWhitespace = 1
 " root.vim
 let g:root#auto = 1
 let g:root#echo = 0
+let g:root#patterns = ['.mod', 'README.md']
