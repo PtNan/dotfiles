@@ -2,7 +2,11 @@
     "vim.statusBarColorControl": true,
     "vim.sneak": true,
     "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-d>": true,
+        "<C-u>": true,
+        "<C-o>": true,
+    },
     "vim.hlsearch": true,
     "vim.leader": "<space>",
     "vim.incsearch": true,
