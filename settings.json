@@ -11,6 +11,8 @@
     "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
     "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
     "vim.highlightedyank.enable": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+    "vim.enableNeovim": true,
     "vim.insertModeKeyBindings": [
         {
             "before": [
@@ -19,12 +21,12 @@
             ],
             "after": [
                 "_"
-            ]
+            ],
         },
         {
             "before": [
-                "leader",
-                "leader"
+                "j",
+                "j"
             ],
             "commands": [
                 "editor.action.triggerSuggest"
@@ -141,7 +143,6 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "editor.fontFamily": "SFMono Nerd Font",
-    "extensions.ignoreRecommendations": true,
     "workbench.colorCustomizations": {
         "statusBar.background": "#005f5f",
         "statusBar.noFolderBackground": "#005f5f",
@@ -149,16 +150,8 @@
     },
     "workbench.iconTheme": "Monokai Pro Icons",
     "git.enableSmartCommit": true,
-    "window.zoomLevel": 0,
     "http.proxy": "http://127.0.0.1:1087",
     "workbench.colorTheme": "Monokai Pro",
     "terminal.external.osxExec": "iTerm.app",
-    "java.errors.incompleteClasspath.severity": "ignore",
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "editor.largeFileOptimizations": false
+    "git.autofetch": true,
 }

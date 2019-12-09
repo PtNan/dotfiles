@@ -80,8 +80,6 @@ nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
 nnoremap <silent> * *zz
 nnoremap <silent> # #zz
-" nnoremap <silent> j jzz
-" nnoremap <silent> k kzz
 nnoremap <silent> j gj
 nnoremap <silent> k gk
 nnoremap <silent> g* g*zz
@@ -89,11 +87,21 @@ nnoremap <silent> <BS> :noh<CR>
 vnoremap < <gv
 vnoremap > >gv
 
+let g:trigger_size = 0.5 * 1048576
+augroup hugefile
+  autocmd!
+  autocmd BufReadPre *
+        \ let size = getfsize(expand('<afile>')) |
+        \ if (size > g:trigger_size) || (size == -2) |
+        \   echohl WarningMsg | echomsg 'WARNING: altering options for this huge file!' | echohl None |
+        \   exec 'CocDisable' |
+        \ else |
+        \   exec 'CocEnable' |
+        \ endif |
+        \ unlet size
+augroup END
+
 au BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-au BufReadPost *
-            \ if line("'\"") > 0 && line("'\"") <= line("$") |
-            \     exe "normal! g`\""|
-            \ endif
 
 if has('clipboard')
     if has('unnamedplus')
@@ -129,7 +137,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'luochen1990/rainbow'
 Plug 'dylanaraps/root.vim'
-Plug 'sebdah/vim-delve'
 Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-repeat'
 Plug 'justinmk/vim-sneak'

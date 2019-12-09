@@ -4,11 +4,6 @@
         "go",
         "json",
         "rust",
-        "vue",
-        "javascript",
-        "python",
-        "java",
-        "tex"
     ],
 
     "tabnine.priority": 100,
@@ -19,16 +14,6 @@
     "git.addGBlameToVirtualText": true,
 
     "explorer.icon.enableNerdfont": true,
-
-    "vetur.format.defaultFormatter.js": "vscode-typescript",
-    "vetur.format.defaultFormatterOptions": {
-        "prettier": {
-        "semi": false,
-        "singleQuote": true
-    }
-    },
-
-    "python.jediEnabled": false,
 
     "go.goplsOptions": {
         "completeUnimported": true,
