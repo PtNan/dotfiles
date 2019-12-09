@@ -2,11 +2,7 @@
     "vim.statusBarColorControl": true,
     "vim.sneak": true,
     "vim.useSystemClipboard": true,
-    "vim.handleKeys": {
-        "<C-d>": true,
-        "<C-u>": true,
-        "<C-o>": true,
-    },
+    "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.leader": "<space>",
     "vim.incsearch": true,
@@ -163,5 +159,6 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
-    }
+    },
+    "editor.largeFileOptimizations": false
 }
