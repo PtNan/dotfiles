@@ -144,9 +144,9 @@
     "explorer.confirmDelete": false,
     "editor.fontFamily": "SFMono Nerd Font",
     "workbench.colorCustomizations": {
-        "statusBar.background": "#005f5f",
-        "statusBar.noFolderBackground": "#005f5f",
-        "statusBar.debuggingBackground": "#005f5f"
+        "statusBar.background": "#007acc",
+        "statusBar.noFolderBackground": "#007acc",
+        "statusBar.debuggingBackground": "#007acc"
     },
     "workbench.iconTheme": "Monokai Pro Icons",
     "git.enableSmartCommit": true,
@@ -154,4 +154,20 @@
     "workbench.colorTheme": "Monokai Pro",
     "terminal.external.osxExec": "iTerm.app",
     "git.autofetch": true,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "[go]": {
+        "editor.snippetSuggestions": "none",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true,
+        }
+    },
+    "gopls": {
+        "usePlaceholders": true, // add parameter placeholders when completing a function
+    
+        // Experimental settings
+        "completeUnimported": true, // autocomplete unimported packages
+        "watchFileChanges": true,  // watch file changes outside of the editor
+        "deepCompletion": true,     // enable deep completion
+    },
 }
