@@ -1,10 +1,4 @@
 " Basics
-
-if exists('g:fvim_loaded')
-    FVimCursorSmoothMove v:true
-    FVimCursorSmoothBlink v:true
-endif
-
 set ambiwidth=double
 set autoindent
 set autoread
@@ -221,11 +215,6 @@ nnoremap ge :CocCommand explorer
         \ --sources=buffer+,file+
         \ --file-columns=git,selection,clip,indent,filename,diagnosticError
         \ <CR>
-
-
-"delve
-nnoremap <F5> :DlvDebug<cr>
-nnoremap <F9> :DlvAddBreakpoint<cr>
 
 
 " indentLine
