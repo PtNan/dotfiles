@@ -121,7 +121,7 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
-Plug 'phanviet/vim-monokai-pro'
+Plug 'kaicataldo/material.vim'
 
 " Plug
 Plug 'neoclide/coc-imselect'
@@ -140,12 +140,12 @@ call plug#end()
 
 
 " scheme
-colorscheme monokai_pro
+let g:material_theme_style = 'palenight'
+colorscheme material
 
 
 " Plugin Config
 nnoremap <Leader>p :PlugUpdate<CR>
-nnoremap <Leader>cc :PlugClean<CR>
 
 
 " coc.nvim
@@ -223,7 +223,7 @@ let g:indentLine_setConceal = 0
 
 " lightline.vim
 let g:lightline = {
-    \  'colorscheme': 'monokai_pro',
+    \  'colorscheme': 'material',
     \  'active': {
     \    'left': [
     \      [ 'mode', 'paste' ],

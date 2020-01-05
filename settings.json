@@ -145,7 +145,7 @@
     "workbench.iconTheme": "Monokai Pro Icons",
     "git.enableSmartCommit": true,
     "http.proxy": "http://127.0.0.1:1087",
-    "workbench.colorTheme": "Monokai Pro",
+    "workbench.colorTheme": "Material Theme Palenight",
     "terminal.external.osxExec": "iTerm.app",
     "git.autofetch": true,
     "terminal.integrated.shell.osx": "/bin/zsh",
