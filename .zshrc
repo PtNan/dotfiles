@@ -35,33 +35,25 @@ alias -s go=v
 alias -s rust=v
 alias -s mod=v
 
+zplug "mafredri/zsh-async", from:"github", use:"async.zsh"
+zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 zplug "zsh-users/zsh-completions", defer:2
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-autosuggestions", defer:2
 zplug "zsh-users/zsh-history-substring-search", defer:2
-zplug "rimraf/k"
+zplug "rimraf/k" 
 zplug "b4b4r07/enhancd", use:init.sh
 zplug "lib/completion", from:oh-my-zsh
 zplug "plugins/cp",   from:oh-my-zsh
+zplug "plugins/docker",   from:oh-my-zsh
+zplug "plugins/docker-compose",   from:oh-my-zsh
 zplug "plugins/extract",   from:oh-my-zsh
 zplug "plugins/git",   from:oh-my-zsh
 zplug "plugins/safe-paste",   from:oh-my-zsh
 zplug "plugins/vi-mode",   from:oh-my-zsh
-zplug "plugins/colored-man-pages",   from:oh-my-zsh
-zplug "mafredri/zsh-async", from:github
-zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 
 if zplug check b4b4r07/enhancd; then
     export ENHANCD_FILTER=fzf
-fi
-
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    else
-        echo
-    fi
 fi
 
 zplug load
