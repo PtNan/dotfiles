@@ -142,13 +142,12 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "editor.fontFamily": "SFMono Nerd Font",
-    "workbench.iconTheme": "Monokai Pro Icons",
     "git.enableSmartCommit": true,
     "http.proxy": "http://127.0.0.1:1087",
-    "workbench.colorTheme": "Material Theme Palenight",
+    "workbench.colorTheme": "One Dark Pro",
     "terminal.external.osxExec": "iTerm.app",
     "git.autofetch": true,
-    "terminal.integrated.shell.osx": "/bin/zsh",
+    "terminal.integrated.shell.osx": "/usr/local/bin/fish",
     "[go]": {
         "editor.snippetSuggestions": "none",
         "editor.formatOnSave": true,
@@ -168,5 +167,6 @@
     "latex-workshop.view.pdf.external.viewer.args": [
         "0",
         "%PDF%"
-    ]
+    ],
+    "workbench.colorCustomizations": {}
 }
