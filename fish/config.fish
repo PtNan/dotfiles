@@ -3,7 +3,9 @@ if not functions -q fisher
     curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
     fish -c fisher
     fisher add b4b4r07/enhancd
-    fisher jhillyerd/plugin-git
+    fisher add jhillyerd/plugin-git
+    fisher add sijad/gitignore
+    fisher add oh-my-fish/plugin-extract
 end
 
 set -x -U EDITOR nvim
