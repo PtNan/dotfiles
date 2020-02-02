@@ -26,7 +26,9 @@ brew instal node
 brew instal ripgrep
 brew instal unrar
 brew instal yarn
-brew instal zplug
+brew install starship
+# brew instal zplug
+# brew instal fish
 
 # brew cask
 brew cask instal appcleaner
