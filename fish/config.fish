@@ -18,7 +18,7 @@ alias bu='brew upgrade && brew cleanup'
 alias v='nvim'
 alias rgf='rg --files | rg'
 alias gom='go mod'
-alias setproxy='set all_proxy socks5://127.0.0.1:1086 && set GOPROXY https://goproxy.io'
+alias setproxy='set -xg all_proxy socks5://127.0.0.1:1080 && set GOPROXY https://goproxy.io'
 alias fishconfig='nvim ~/.config/fish/config.fish'
 alias vconfig='nvim ~/.config/nvim/init.vim'
 
