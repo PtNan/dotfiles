@@ -124,13 +124,15 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'kaicataldo/material.vim'
 
 " Plug
+Plug 'skywind3000/asynctasks.vim'
+Plug 'skywind3000/asyncrun.vim'
 Plug 'neoclide/coc-imselect'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'luochen1990/rainbow'
-Plug 'dylanaraps/root.vim'
+Plug 'voldikss/vim-floaterm'
 Plug 'simnalamburt/vim-mundo'
 Plug 'tpope/vim-repeat'
 Plug 'justinmk/vim-sneak'
@@ -147,6 +149,14 @@ colorscheme material
 " Plugin Config
 nnoremap <Leader>p :PlugUpdate<CR>
 
+" asynctasks
+let g:asyncrun_open = 6
+let g:asyncrun_rootmarks = ['.git', '.svn', '.root', '.project', '.hg']
+noremap <silent><f5> :AsyncTask file-run<cr>
+noremap <silent><f6> :AsyncTask project-run<cr>
+noremap <silent><f7> :AsyncTask project-build<cr>
+noremap <silent><f9> :AsyncTask file-build<cr>
+
 
 " coc.nvim
 " au
@@ -157,11 +167,10 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> [d <Plug>(coc-diagnostic-prev)
 nmap <silent> ]d <Plug>(coc-diagnostic-next)
+nmap <silent> gr <Plug>(coc-references)
 nmap <silent> <F2> <plug>(coc-rename)
 " CocList
 nnoremap <silent> <Leader>a  :<C-u>CocList diagnostics<cr>
-nnoremap <silent> <Leader>s  :<C-u>CocList -I symbols<cr>
-nnoremap <silent> <Leader>w  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 nnoremap <Leader>f :CocList files<CR>
 nnoremap <Leader>g :CocList gfiles<CR>
 nnoremap <Leader>m :CocList mru<CR>
@@ -175,7 +184,13 @@ inoremap <silent><expr> <TAB>
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+" Enter
+if has('patch8.1.1068')
+  " Use `complete_info` if your (Neo)Vim version supports it.
+  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+else
+  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+endif
 " hover
 nnoremap <silent> gh :call <SID>show_documentation()<CR>
 function! s:show_documentation()
@@ -189,13 +204,16 @@ endfunction
 nmap [g <Plug>(coc-git-prevchunk)
 nmap ]g <Plug>(coc-git-nextchunk)
 " grep
+nnoremap <silent> <Leader>w  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
+vnoremap <leader>w :<C-u>call <SID>GrepFromSelected(visualmode())<CR>
+
 function! s:GrepArgs(...)
   let list = ['-S', '-smartcase', '-i', '-ignorecase', '-w', '-word',
         \ '-e', '-regex', '-u', '-skip-vcs-ignores', '-t', '-extension']
   return join(list, "\n")
 endfunction
 command! -nargs=+ -complete=custom,s:GrepArgs Rg exe 'CocList grep '.<q-args>
-vnoremap <leader>w :<C-u>call <SID>GrepFromSelected(visualmode())<CR>
+
 function! s:GrepFromSelected(type)
   let saved_unnamed_register = @@
   if a:type ==# 'v'
@@ -211,10 +229,28 @@ function! s:GrepFromSelected(type)
   execute 'CocList grep '.word
 endfunction
 " coc-explorer
-nnoremap ge :CocCommand explorer
-        \ --sources=buffer+,file+
-        \ --file-columns=git,selection,clip,indent,filename,diagnosticError
-        \ <CR>
+let g:coc_explorer_global_presets = {
+\   '.vim': {
+\      'root-uri': '~/.vim',
+\   },
+\   'floating': {
+\      'position': 'floating',
+\   },
+\   'floatingLeftside': {
+\      'position': 'floating',
+\      'floating-position': 'left-center',
+\      'floating-width': 50,
+\   },
+\   'floatingRightside': {
+\      'position': 'floating',
+\      'floating-position': 'left-center',
+\      'floating-width': 50,
+\   },
+\   'simplify': {
+\     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   }
+\ }
+nnoremap ge :CocCommand explorer<CR>
 
 
 " indentLine
@@ -265,8 +301,3 @@ let g:NERDTrimTrailingWhitespace = 1
     \  'css': 0,
     \  }
     \  }
-
-" root.vim
-let g:root#auto = 1
-let g:root#echo = 0
-let g:root#patterns = ['.mod', 'README.md']
