@@ -6,7 +6,6 @@
         "rust",
     ],
 
-    "tabnine.priority": 100,
     "coc.source.word.priority": 1,
 
     "yank.limit": 50,

@@ -132,8 +132,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'luochen1990/rainbow'
-Plug 'voldikss/vim-floaterm'
 Plug 'simnalamburt/vim-mundo'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
@@ -301,3 +301,11 @@ let g:NERDTrimTrailingWhitespace = 1
     \  'css': 0,
     \  }
     \  }
+
+ " vim-polyglot
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1

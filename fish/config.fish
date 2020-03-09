@@ -8,10 +8,10 @@ if not functions -q fisher
     fisher add oh-my-fish/plugin-extract
 end
 
-set -x -U EDITOR nvim
-set -x -U GOPATH $HOME/go
-set -x -U GOPROXY "https://goproxy.io"
-set -x -U PATH $PATH $GOPATH/bin
+set -Ux EDITOR nvim
+set -Ux GOPATH $HOME/go
+set -Ux GOPROXY "https://goproxy.io"
+set -gx PATH $PATH $GOPATH/bin
 
 alias b='brew'
 alias bu='brew upgrade && brew cleanup'
