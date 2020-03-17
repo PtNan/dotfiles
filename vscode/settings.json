@@ -1,4 +1,10 @@
 {
+    "workbench.colorTheme": "One Dark Pro",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.preferredDarkColorTheme": "One Dark Pro",
+    "workbench.preferredHighContrastColorTheme": "One Dark Pro",
+    "workbench.preferredLightColorTheme": "One Dark Pro",
+    "material-icon-theme.activeIconPack": "react",
     "vim.sneak": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
@@ -144,7 +150,6 @@
     "editor.fontFamily": "SFMono Nerd Font",
     "git.enableSmartCommit": true,
     "http.proxy": "http://127.0.0.1:1087",
-    "workbench.colorTheme": "One Dark Pro",
     "terminal.external.osxExec": "iTerm.app",
     "git.autofetch": true,
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
