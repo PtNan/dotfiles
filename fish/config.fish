@@ -11,6 +11,7 @@ end
 set -Ux EDITOR nvim
 set -Ux GOPATH $HOME/go
 set -Ux GOPROXY "https://goproxy.io"
+set -gx PATH ~/.cargo/bin $PATH
 set -gx PATH $PATH $GOPATH/bin
 
 alias b='brew'
