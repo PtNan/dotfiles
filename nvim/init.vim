@@ -121,12 +121,11 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
-Plug 'kaicataldo/material.vim'
+Plug 'chuling/vim-equinusocio-material'
 
 " Plug
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
-Plug 'neoclide/coc-imselect'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
@@ -142,8 +141,8 @@ call plug#end()
 
 
 " scheme
-let g:material_theme_style = 'palenight'
-colorscheme material
+let g:equinusocio_material_hide_vertsplit = 1
+colorscheme equinusocio_material
 
 
 " Plugin Config
@@ -259,7 +258,7 @@ let g:indentLine_setConceal = 0
 
 " lightline.vim
 let g:lightline = {
-    \  'colorscheme': 'material',
+    \  'colorscheme': 'equinusocio_material',
     \  'active': {
     \    'left': [
     \      [ 'mode', 'paste' ],
