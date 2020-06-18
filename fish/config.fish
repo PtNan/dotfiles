@@ -18,11 +18,12 @@ alias b='brew'
 alias bu='brew upgrade && brew cleanup'
 alias v='nvim'
 alias rgf='rg --files | rg'
+alias psrg='ps -a | rg'
 alias gom='go mod'
-alias setap='set -xg all_proxy socks5://127.0.0.1:7891 && set GOPROXY https://goproxy.io'
-alias setgp='set GOPROXY https://goproxy.io'
+alias setap='set -xg all_proxy socks5://127.0.0.1:7891'
+alias setgp='go env -w GOPROXY=https://goproxy.cn,direct'
 alias fishconfig='nvim ~/.config/fish/config.fish'
-alias vconfig='nvim ~/.config/nvim/init.vim'
+alias nvimconfig='nvim ~/.config/nvim/init.vim'
 
 fish_vi_key_bindings
 starship init fish | source
