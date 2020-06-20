@@ -13,6 +13,7 @@ set -Ux GOPATH $HOME/go
 set -Ux GOPROXY "https://goproxy.io"
 set -gx PATH ~/.cargo/bin $PATH
 set -gx PATH $PATH $GOPATH/bin
+set go env -w GOPROXY=https://goproxy.cn,direct
 
 alias b='brew'
 alias bu='brew upgrade && brew cleanup'
@@ -20,8 +21,8 @@ alias v='nvim'
 alias rgf='rg --files | rg'
 alias psrg='ps -a | rg'
 alias gom='go mod'
-alias setap='set -xg all_proxy socks5://127.0.0.1:7891'
-alias setgp='go env -w GOPROXY=https://goproxy.cn,direct'
+alias sap='set -xg all_proxy socks5://127.0.0.1:7891'
+# alias setgp='go env -w GOPROXY=https://goproxy.cn,direct'
 alias fishconfig='nvim ~/.config/fish/config.fish'
 alias nvimconfig='nvim ~/.config/nvim/init.vim'
 

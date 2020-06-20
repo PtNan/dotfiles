@@ -5,19 +5,16 @@
     "workbench.preferredHighContrastColorTheme": "One Dark Pro",
     "workbench.preferredLightColorTheme": "One Dark Pro",
     "material-icon-theme.activeIconPack": "react",
+    "vim.handleKeys": {
+        "<C-d>": false,
+    },
     "vim.sneak": true,
     "vim.useSystemClipboard": true,
     "vim.useCtrlKeys": true,
     "vim.hlsearch": true,
     "vim.leader": "<space>",
     "vim.incsearch": true,
-    "vim.autoSwitchInputMethod.enable": true,
-    "vim.autoSwitchInputMethod.defaultIM": "com.apple.keylayout.US",
-    "vim.autoSwitchInputMethod.obtainIMCmd": "/usr/local/bin/im-select",
-    "vim.autoSwitchInputMethod.switchIMCmd": "/usr/local/bin/im-select {im}",
     "vim.highlightedyank.enable": true,
-    "vim.neovimPath": "/usr/local/bin/nvim",
-    "vim.enableNeovim": true,
     "vim.insertModeKeyBindings": [
         {
             "before": [
@@ -90,7 +87,29 @@
             ],
             "after": [
                 "g",
-                "j"
+                "j",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "n"
+            ],
+            "after": [
+                "n",
+                "z",
+                "z"
+            ]
+        },
+        {
+            "before": [
+                "N"
+            ],
+            "after": [
+                "N",
+                "z",
+                "z"
             ]
         },
         {
@@ -99,7 +118,9 @@
             ],
             "after": [
                 "g",
-                "k"
+                "k",
+                "z",
+                "z"
             ]
         },
         {
@@ -147,15 +168,13 @@
     "go.useLanguageServer": true,
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
-    "editor.fontFamily": "SFMono Nerd Font",
+    "editor.fontFamily": "SF Mono",
     "git.enableSmartCommit": true,
-    "http.proxy": "http://127.0.0.1:1087",
+    "http.proxy": "http://127.0.0.1:7890",
     "terminal.external.osxExec": "iTerm.app",
     "git.autofetch": true,
     "terminal.integrated.shell.osx": "/usr/local/bin/fish",
     "[go]": {
-        "editor.snippetSuggestions": "none",
-        "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "source.organizeImports": true,
         }
@@ -173,5 +192,7 @@
         "0",
         "%PDF%"
     ],
-    "workbench.colorCustomizations": {}
+    "editor.semanticHighlighting.enabled": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.fontLigatures": true,
 }

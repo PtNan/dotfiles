@@ -74,8 +74,8 @@ nnoremap <silent> n nzz
 nnoremap <silent> N Nzz
 nnoremap <silent> * *zz
 nnoremap <silent> # #zz
-nnoremap <silent> j gj
-nnoremap <silent> k gk
+nnoremap <silent> j gjzz
+nnoremap <silent> k gkzz
 nnoremap <silent> g* g*zz
 nnoremap <silent> <BS> :noh<CR>
 vnoremap < <gv
