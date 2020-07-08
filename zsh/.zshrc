@@ -13,8 +13,6 @@ alias psrg='ps -a | rg'
 alias gom='go mod'
 alias proxy='export all_proxy=socks5://127.0.0.1:7891'
 alias unproxy='unset all_proxy'
-alias b='brew'
-alias bu='brew update && brew cleanup'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -51,10 +49,14 @@ zinit snippet OMZ::lib/key-bindings.zsh
 zinit snippet OMZ::lib/git.zsh
 zinit snippet OMZ::lib/theme-and-appearance.zsh
 zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit snippet OMZ::plugins/golang/golang.plugin.zsh
+zinit snippet OMZ::plugins/brew/brew.plugin.zsh
 zinit ice as"completion"
 zinit snippet OMZ::plugins/docker/_docker
 zinit ice as"completion"
 zinit snippet OMZ::plugins/docker-compose/_docker-compose
+zinit ice as="completion"
+zinit snippet OMZ::plugins/cargo/_cargo
 
 zinit light lukechilds/zsh-nvm
 zinit load zdharma/history-search-multi-word
