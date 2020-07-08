@@ -95,8 +95,6 @@ augroup hugefile
         \ unlet size
 augroup END
 
-au BufWritePre *.go :call CocAction('runCommand', 'editor.action.organizeImport')
-
 if has('clipboard')
     if has('unnamedplus')
         set clipboard=unnamed,unnamedplus
@@ -124,15 +122,12 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'chuling/vim-equinusocio-material'
 
 " Plug
-Plug 'skywind3000/asynctasks.vim'
-Plug 'skywind3000/asyncrun.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Yggdroot/indentLine'
 Plug 'itchyny/lightline.vim'
 Plug 'luochen1990/rainbow'
 Plug 'tpope/vim-commentary'
 Plug 'simnalamburt/vim-mundo'
-Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-repeat'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
@@ -148,18 +143,8 @@ colorscheme equinusocio_material
 " Plugin Config
 nnoremap <Leader>p :PlugUpdate<CR>
 
-" asynctasks
-let g:asyncrun_open = 6
-let g:asyncrun_rootmarks = ['.git', '.svn', '.root', '.project', '.hg']
-noremap <silent><f5> :AsyncTask file-run<cr>
-noremap <silent><f6> :AsyncTask project-run<cr>
-noremap <silent><f7> :AsyncTask project-build<cr>
-noremap <silent><f9> :AsyncTask file-build<cr>
-
-
 " coc.nvim
 " au
-au CursorHold * silent call CocActionAsync('highlight')
 au! CompleteDone * if pumvisible() == 0 | pclose | endif
 " common
 imap <C-j> <Plug>(coc-snippets-expand-jump)
@@ -300,11 +285,3 @@ let g:NERDTrimTrailingWhitespace = 1
     \  'css': 0,
     \  }
     \  }
-
- " vim-polyglot
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_extra_types = 1
