@@ -5,6 +5,8 @@ export PATH=$PATH:$GOPATH:~/.cargo/bin
 export GOPROXY=https://goproxy.io
 export NVM_LAZY_LOAD=true
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')
+export FZF_DEFAULT_COMMAND='fd --type f'
+DISABLE_LS_COLORS=true
 
 # alias
 alias zshconfig='nvim ~/.zshrc'
@@ -13,6 +15,7 @@ alias psrg='ps -a | rg'
 alias gom='go mod'
 alias proxy='export all_proxy=socks5://127.0.0.1:7891'
 alias unproxy='unset all_proxy'
+alias ls=exa
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -34,6 +37,11 @@ zinit light-mode for \
     zinit-zsh/z-a-as-monitor \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node \
+    lukechilds/zsh-nvm \
+    OMZ::plugins/extract\
+    OMZ::plugins/safe-paste \
+    OMZ::plugins/sudo \
+    zdharma/history-search-multi-word
 
 zinit ice lucid wait="0" atload='_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
@@ -41,26 +49,7 @@ zinit ice lucid wait='0' atinit='zpcompinit'
 zinit light zdharma/fast-syntax-highlighting
 zinit ice lucid wait='0'
 zinit light zsh-users/zsh-completions
-
-zinit snippet OMZ::lib/clipboard.zsh
-zinit snippet OMZ::lib/completion.zsh
-zinit snippet OMZ::lib/history.zsh
-zinit snippet OMZ::lib/key-bindings.zsh
-zinit snippet OMZ::lib/git.zsh
-zinit snippet OMZ::lib/theme-and-appearance.zsh
-zinit snippet OMZ::plugins/git/git.plugin.zsh
-zinit snippet OMZ::plugins/golang/golang.plugin.zsh
-zinit snippet OMZ::plugins/brew/brew.plugin.zsh
-zinit ice as"completion"
-zinit snippet OMZ::plugins/docker/_docker
-zinit ice as"completion"
-zinit snippet OMZ::plugins/docker-compose/_docker-compose
-zinit ice as="completion"
-zinit snippet OMZ::plugins/cargo/_cargo
-
-zinit light lukechilds/zsh-nvm
-zinit load zdharma/history-search-multi-word
-zinit ice wait'!0'
+zinit ice lucid wait'0'
 zinit light b4b4r07/enhancd
 
 zinit as="null" wait="1" lucid from="gh-r" for \
@@ -77,9 +66,22 @@ zinit ice as="completion"
 zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/fd/_fd'
 zinit ice mv="*.zsh -> _exa" as="completion"
 zinit snippet 'https://github.com/ogham/exa/blob/master/contrib/completions.zsh'
-DISABLE_LS_COLORS=true
-alias ls=exa
-export FZF_DEFAULT_COMMAND='fd --type f'
+
+zinit snippet OMZ::lib/clipboard.zsh
+zinit snippet OMZ::lib/completion.zsh
+zinit snippet OMZ::lib/history.zsh
+zinit snippet OMZ::lib/key-bindings.zsh
+zinit snippet OMZ::lib/git.zsh
+zinit snippet OMZ::lib/theme-and-appearance.zsh
+zinit snippet OMZ::plugins/git/git.plugin.zsh
+zinit snippet OMZ::plugins/golang/golang.plugin.zsh
+zinit snippet OMZ::plugins/brew/brew.plugin.zsh
+zinit ice as"completion"
+zinit snippet OMZ::plugins/docker/_docker
+zinit ice as"completion"
+zinit snippet OMZ::plugins/docker-compose/_docker-compose
+zinit ice as="completion"
+zinit snippet OMZ::plugins/cargo/_cargo
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
