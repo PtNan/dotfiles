@@ -12,7 +12,6 @@ DISABLE_LS_COLORS=true
 alias zshconfig='nvim ~/.zshrc'
 alias rgf='rg --files | rg'
 alias psrg='ps -a | rg'
-alias gom='go mod'
 alias proxy='export all_proxy=socks5://127.0.0.1:7891'
 alias unproxy='unset all_proxy'
 alias ls=exa
