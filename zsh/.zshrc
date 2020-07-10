@@ -48,8 +48,12 @@ zinit ice lucid wait='0' atinit='zpcompinit'
 zinit light zdharma/fast-syntax-highlighting
 zinit ice lucid wait='0'
 zinit light zsh-users/zsh-completions
-zinit ice lucid wait'0'
-zinit light b4b4r07/enhancd
+zinit ice \
+  atclone'rm -rf conf.d; rm -rf functions; rm -f *.fish;' \
+  pick'init.sh' \
+  nocompile'!' \
+  wait'!0' 
+zinit light b4b4r07/enhancd 
 
 zinit as="null" wait="1" lucid from="gh-r" for \
     mv="exa* -> exa"  sbin       ogham/exa \
