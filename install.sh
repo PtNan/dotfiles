@@ -22,6 +22,7 @@ brew cask instal docker
 brew cask instal google-chrome
 brew cask instal iina
 brew cask instal iterm2
+brew cask instal Karabiner-Elements
 brew cask instal keka
 brew cask instal maccy
 brew cask instal skim

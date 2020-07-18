@@ -1,14 +1,17 @@
 # PATH
 export EDITOR="nvim"
 export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH:~/.cargo/bin
 export GOPROXY=https://goproxy.io
 export NVM_LAZY_LOAD=true
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')
 export FZF_DEFAULT_COMMAND='fd --type f'
+export GOBIN=$GOPATH/bin
+export CARGO=$HOME/.cargo/bin
+export PATH=$PATH:$GOPATH:$GOBIN:$CARGO
 DISABLE_LS_COLORS=true
 
 # alias
+alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias zshconfig='nvim ~/.zshrc'
 alias rgf='rg --files | rg'
 alias psrg='ps -a | rg'
@@ -62,13 +65,6 @@ zinit as="null" wait="1" lucid from="gh-r" for \
 
 zinit ice from"gh-r" as"program"
 zinit load junegunn/fzf-bin
-zinit ice mv="*.zsh -> _fzf" as="completion"
-zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/completion.zsh'
-zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh'
-zinit ice as="completion"
-zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/fd/_fd'
-zinit ice mv="*.zsh -> _exa" as="completion"
-zinit snippet 'https://github.com/ogham/exa/blob/master/contrib/completions.zsh'
 
 zinit snippet OMZ::lib/clipboard.zsh
 zinit snippet OMZ::lib/completion.zsh
