@@ -15,8 +15,8 @@ alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias zshconfig='nvim ~/.zshrc'
 alias rgf='rg --files | rg'
 alias psrg='ps -a | rg'
-alias proxy='export all_proxy=socks5://127.0.0.1:7891'
-alias unproxy='unset all_proxy'
+alias px='export all_proxy=socks5://127.0.0.1:7891'
+alias upx='unset all_proxy'
 alias ls=exa
 
 ### Added by Zinit's installer
