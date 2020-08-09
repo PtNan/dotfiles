@@ -1,3 +1,4 @@
+defaults write -g ApplePressAndHoldEnabled -bool false
 # command line tool
 xcode-select --install
 # homebrew
