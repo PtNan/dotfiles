@@ -6,8 +6,10 @@ export NVM_LAZY_LOAD=true
 export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')
 export FZF_DEFAULT_COMMAND='fd --type f'
 export GOBIN=$GOPATH/bin
-export CARGO=$HOME/.cargo/bin
-export PATH=$PATH:$GOPATH:$GOBIN:$CARGO
+export CARGO_HOME=$HOME/.cargo
+export RUSTUP_HOME=$HOME/.rustup
+export PATH=$PATH:$GOPATH:$GOBIN:$CARGO_HOME:$CARGO_HOME/bin:$RUSTUP_HOME
+export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
 DISABLE_LS_COLORS=true
 
 # alias
@@ -84,3 +86,4 @@ zinit snippet OMZ::plugins/cargo/_cargo
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
