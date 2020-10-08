@@ -2,8 +2,6 @@
 export EDITOR="nvim"
 export GOPATH=$HOME/go
 export GOPROXY=https://goproxy.io
-export NVM_LAZY_LOAD=true
-export NVM_LAZY_LOAD_EXTRA_COMMANDS=('nvim')
 export FZF_DEFAULT_COMMAND='fd --type f'
 export GOBIN=$GOPATH/bin
 export CARGO_HOME=$HOME/.cargo
@@ -17,7 +15,7 @@ alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias zshconfig='nvim ~/.zshrc'
 alias rgf='rg --files | rg'
 alias psrg='ps -a | rg'
-alias px='export all_proxy=socks5://127.0.0.1:7891'
+alias px='export all_proxy=http://127.0.0.1:1087'
 alias upx='unset all_proxy'
 alias ls=exa
 
@@ -41,7 +39,6 @@ zinit light-mode for \
     zinit-zsh/z-a-as-monitor \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node \
-    lukechilds/zsh-nvm \
     OMZ::plugins/extract\
     OMZ::plugins/safe-paste \
     OMZ::plugins/sudo \
