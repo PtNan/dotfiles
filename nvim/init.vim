@@ -119,7 +119,7 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
-Plug 'chuling/vim-equinusocio-material'
+Plug 'lifepillar/vim-solarized8'
 
 " Plug
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -136,9 +136,8 @@ call plug#end()
 
 
 " scheme
-let g:equinusocio_material_hide_vertsplit = 1
-colorscheme equinusocio_material
-
+set background=light
+colorscheme solarized8
 
 " Plugin Config
 nnoremap <Leader>p :PlugUpdate<CR>
@@ -243,7 +242,7 @@ let g:indentLine_setConceal = 0
 
 " lightline.vim
 let g:lightline = {
-    \  'colorscheme': 'equinusocio_material',
+    \  'colorscheme': 'solarized',
     \  'active': {
     \    'left': [
     \      [ 'mode', 'paste' ],
