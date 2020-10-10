@@ -11,13 +11,14 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/i
 brew instal git
 brew instal go
 brew instal neovim
-brew instal ripgrep
+brew instal rustup-init
 brew instal starship
 
 # brew cask
 brew cask instal appcleaner
 brew cask instal basictex
 brew cask instal clashx
+brew cask instal datagrip
 brew cask instal docker
 brew cask instal google-chrome
 brew cask instal iina
@@ -26,4 +27,5 @@ brew cask instal Karabiner-Elements
 brew cask instal maccy
 brew cask instal skim
 brew cask instal swish
+brew cask instal v2rayu
 brew cask instal visual-studio-code
