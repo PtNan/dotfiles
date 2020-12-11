@@ -1,13 +1,9 @@
 # PATH
 export EDITOR="nvim"
 export GOPATH=$HOME/go
-export GOPROXY=https://goproxy.io
 export FZF_DEFAULT_COMMAND='fd --type f'
 export GOBIN=$GOPATH/bin
-export CARGO_HOME=$HOME/.cargo
-export RUSTUP_HOME=$HOME/.rustup
-export PATH=$PATH:$GOPATH:$GOBIN:$CARGO_HOME:$CARGO_HOME/bin:$RUSTUP_HOME
-export RUSTUP_DIST_SERVER=https://mirrors.tuna.tsinghua.edu.cn/rustup
+export PATH=$PATH:$GOPATH:$GOBIN
 DISABLE_LS_COLORS=true
 
 # alias
@@ -83,4 +79,3 @@ zinit snippet OMZ::plugins/cargo/_cargo
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
