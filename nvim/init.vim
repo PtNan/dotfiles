@@ -119,7 +119,7 @@ endif
 call plug#begin('~/.local/share/nvim/plugged')
 
 " Theme
-Plug 'lifepillar/vim-solarized8'
+Plug 'connorholyday/vim-snazzy'
 
 " Plug
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -137,7 +137,7 @@ call plug#end()
 
 " scheme
 set background=light
-colorscheme solarized8
+colorscheme snazzy
 
 " Plugin Config
 nnoremap <Leader>p :PlugUpdate<CR>
@@ -242,7 +242,7 @@ let g:indentLine_setConceal = 0
 
 " lightline.vim
 let g:lightline = {
-    \  'colorscheme': 'solarized',
+    \  'colorscheme': 'snazzy',
     \  'active': {
     \    'left': [
     \      [ 'mode', 'paste' ],
