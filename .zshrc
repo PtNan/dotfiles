@@ -63,5 +63,3 @@ zinit snippet OMZ::plugins/docker-compose/_docker-compose
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
