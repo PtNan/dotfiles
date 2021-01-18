@@ -12,7 +12,6 @@ alias rgf='rg --files | rg'
 alias psrg='ps -a | rg'
 alias px='export all_proxy=http://127.0.0.1:7890'
 alias upx='unset all_proxy'
-alias ls=exa
 alias dc='docker-compose'
 
 ### Added by Zinit's installer
@@ -31,7 +30,6 @@ autoload -Uz _zinit
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
-    zinit-zsh/z-a-rust \
     zinit-zsh/z-a-as-monitor \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node \
@@ -65,3 +63,5 @@ zinit snippet OMZ::plugins/docker-compose/_docker-compose
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
