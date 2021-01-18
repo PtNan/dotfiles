@@ -4,6 +4,7 @@ export GOPATH=$HOME/go
 export FZF_DEFAULT_COMMAND='fd --type f'
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH:$GOBIN
+
 DISABLE_LS_COLORS=true
 
 # alias
@@ -11,9 +12,10 @@ alias nvimconfig='nvim ~/.config/nvim/init.vim'
 alias zshconfig='nvim ~/.zshrc'
 alias rgf='rg --files | rg'
 alias psrg='ps -a | rg'
-alias px='export all_proxy=http://127.0.0.1:1087'
+alias px='export all_proxy=http://127.0.0.1:7890'
 alias upx='unset all_proxy'
 alias ls=exa
+alias dc='docker-compose'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -79,3 +81,5 @@ zinit snippet OMZ::plugins/cargo/_cargo
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
