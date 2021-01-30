@@ -13,6 +13,7 @@ alias psrg='ps -a | rg'
 alias px='export all_proxy=http://127.0.0.1:7890'
 alias upx='unset all_proxy'
 alias dc='docker-compose'
+alias bubc='px\bubc'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -40,10 +41,10 @@ zinit light-mode for \
 
 zinit ice lucid wait="0" atload='_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
-zinit ice lucid wait='0' atinit='zpcompinit'
-zinit light zdharma/fast-syntax-highlighting
 zinit ice lucid wait='0'
 zinit light zsh-users/zsh-completions
+zinit ice lucid wait='0' atinit='zpcompinit'
+zinit light zdharma/fast-syntax-highlighting
 zinit as="null" wait="1" lucid from="gh-r" for \
     mv="*/rg -> rg"   sbin		BurntSushi/ripgrep
 
