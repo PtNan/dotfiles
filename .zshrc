@@ -13,7 +13,6 @@ alias psrg='ps -a | rg'
 alias px='export all_proxy=http://127.0.0.1:7890'
 alias upx='unset all_proxy'
 alias dc='docker-compose'
-alias bubc='px\bubc'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -64,3 +63,4 @@ zinit snippet OMZ::plugins/docker-compose/_docker-compose
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
+px
