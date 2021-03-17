@@ -1,18 +1,20 @@
 # homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-# homebrew
-brew instal starship
-brew instal node
-brew instal neovim
-brew instal go
+brew install starship
+brew install node
+brew install neovim
+brew install go
 
-# brew cask
-brew cask instal appcleaner
-brew cask instal clashx
-brew cask instal docker
-brew cask instal google-chrome
-brew cask instal iina
-brew cask instal kitty
-brew cask instal Karabiner-Elements
-brew cask instal swish
-brew cask instal visual-studio-code
+brew cask install appcleaner
+brew cask install clashx
+brew cask install docker
+brew cask install google-chrome
+brew cask install iina
+brew cask install alacritty
+brew cask install Karabiner-Elements
+brew cask install swish
+brew cask install switchkey
+brew cask install visual-studio-code
+
+brew tap homebrew/cask-fonts
+brew install --cask font-jetbrains-mono
