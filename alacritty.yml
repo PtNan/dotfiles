@@ -1,0 +1,67 @@
+tabspaces: 4
+live_config_reload: true
+
+window:
+  dimensions:
+    columns: 160
+    lines: 48
+
+  padding:
+    x: 0
+    y: 0
+
+  dynamic_padding: false
+  decorations: full
+  startup_mode: Windowed
+
+selection:
+    save_to_clipboard: true
+
+font:
+  size: 13
+
+  normal:
+    family: JetBrains Mono
+    style: Regular
+
+  bold:
+    family: JetBrains Mono
+    style: Bold
+
+  italic:
+    family: JetBrains Mono
+    style: Italic
+
+# Monokai Pro
+colors:
+  # Default colors
+  primary:
+    background: '#2D2A2E'
+    foreground: '#FCFCFA'
+
+  # Normal colors
+  normal:
+    black:   '#403E41'
+    red:     '#FF6188'
+    green:   '#A9DC76'
+    yellow:  '#FFD866'
+    blue:    '#FC9867'
+    magenta: '#AB9DF2'
+    cyan:    '#78DCE8'
+    white:   '#FCFCFA'
+
+  # Bright colors
+  bright:
+    black:   '#727072'
+    red:     '#FF6188'
+    green:   '#A9DC76'
+    yellow:  '#FFD866'
+    blue:    '#FC9867'
+    magenta: '#AB9DF2'
+    cyan:    '#78DCE8'
+    white:   '#FCFCFA'
+
+key_bindings:
+  - { key: N, mods: Command, action: SpawnNewInstance }
+  - { key: Comma,     mods: Command,      command:
+      {program: "sh", args: ["-c","open ~/.config/alacritty/alacritty.yml"]}     }
