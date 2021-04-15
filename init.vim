@@ -128,9 +128,6 @@ Plug 'tpope/vim-repeat'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-surround'
 Plug 'mg979/vim-visual-multi'
-Plug 'junegunn/fzf.vim' 
-Plug 'antoinemadec/coc-fzf'
-Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
 call plug#end()
 
 
@@ -151,11 +148,11 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> [d <Plug>(coc-diagnostic-prev)
 nmap <silent> ]d <Plug>(coc-diagnostic-next)
 nmap <silent> gr <Plug>(coc-references)
-nmap <silent> <F2> <plug>(coc-rename)
+nmap <silent> rn <plug>(coc-rename)
 " CocList
-nnoremap <Leader>f :<C-u>CocFzfList files<CR>
-nnoremap <Leader><Leader> :<C-u>CocFzfList 
-nnoremap <Leader>m :<C-u>CocFzfList mru<CR>
+nnoremap <Leader>f :<C-u>CocList files<CR>
+nnoremap <Leader><Leader> :<C-u>CocList 
+nnoremap <Leader>m :<C-u>CocList mru<CR>
 " TAB
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -185,30 +182,6 @@ endfunction
 " grep
 nnoremap <Leader>g :CocList grep<CR>
 nnoremap <silent> <Leader>w  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
-" coc-explorer
-let g:coc_explorer_global_presets = {
-\   '.vim': {
-\      'root-uri': '~/.vim',
-\   },
-\   'floating': {
-\      'position': 'floating',
-\   },
-\   'floatingLeftside': {
-\      'position': 'floating',
-\      'floating-position': 'left-center',
-\      'floating-width': 50,
-\   },
-\   'floatingRightside': {
-\      'position': 'floating',
-\      'floating-position': 'left-center',
-\      'floating-width': 50,
-\   },
-\   'simplify': {
-\     'file.child.template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
-\   }
-\ }
-nnoremap ge :CocCommand explorer<CR>
-
 
 " indentLine
 let g:indentLine_setConceal = 0
