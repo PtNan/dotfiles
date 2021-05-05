@@ -12,7 +12,7 @@ alias rgf='rg --files | rg'
 alias psrg='ps -a | rg'
 alias px='export all_proxy=http://127.0.0.1:7890'
 alias upx='unset all_proxy'
-alias dc='docker-compose'
+alias dc='docker compose'
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -46,6 +46,7 @@ zinit ice lucid wait='0' atinit='zpcompinit'
 zinit light zdharma/fast-syntax-highlighting
 zinit as="null" wait="1" lucid from="gh-r" for \
     mv="*/rg -> rg"   sbin		BurntSushi/ripgrep
+zinit light agkozak/zsh-z
 
 zinit snippet OMZ::lib/clipboard.zsh
 zinit snippet OMZ::lib/completion.zsh
@@ -58,9 +59,9 @@ zinit snippet OMZ::plugins/golang/golang.plugin.zsh
 zinit snippet OMZ::plugins/brew/brew.plugin.zsh
 zinit ice as"completion"
 zinit snippet OMZ::plugins/docker/_docker
-zinit ice as"completion"
-zinit snippet OMZ::plugins/docker-compose/_docker-compose
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
 px
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
