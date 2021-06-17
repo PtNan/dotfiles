@@ -6,8 +6,9 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH:$GOBIN
 
 # alias
-alias nvimconfig='nvim ~/.config/nvim/init.vim'
-alias zshconfig='nvim ~/.zshrc'
+alias nvimconf='nvim ~/.config/nvim/init.vim'
+alias zshconf='nvim ~/.zshrc'
+alias packerconf='nvim ~/.config/nvim/lua/plugins.lua'
 alias rgf='rg --files | rg'
 alias psrg='ps -a | rg'
 alias px='export all_proxy=http://127.0.0.1:7890'
