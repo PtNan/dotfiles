@@ -100,6 +100,9 @@ augroup END
 lua require('plugins')
 au BufWritePost plugins.lua PackerCompile
 
+colorscheme material
+let g:material_style = 'darker'
+
 " coc.nvim
 " au
 au! CompleteDone * if pumvisible() == 0 | pclose | endif

@@ -1,5 +1,6 @@
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
+    use 'marko-cerovac/material.nvim'
     use {
         'neoclide/coc.nvim'
     }
@@ -71,16 +72,13 @@ return require('packer').startup(function()
     use 'mg979/vim-visual-multi'
     use { 
        'nvim-treesitter/nvim-treesitter', run = ':TSUpdate',
+       config = function() 
         require'nvim-treesitter.configs'.setup {
           highlight = {
             enable = true,
-            },
-        },
-    }
-    use { 
-        'marko-cerovac/material.nvim',
-        require('material').set(),
-        require('material.functions').change_style("darker"),
+            }
+        }
+       end
     }
     use {
         'kyazdani42/nvim-tree.lua'
