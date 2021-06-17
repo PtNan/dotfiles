@@ -62,6 +62,7 @@ set wildmenu
 set wildoptions=pum
 set wrap
 set clipboard=unnamed
+set syntax=off
 
 
 if !isdirectory(expand("~/.local/share/nvim/undo"))
@@ -96,47 +97,8 @@ augroup hugefile
         \ unlet size
 augroup END
 
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif  
-au InsertEnter * :set norelativenumber number
-au InsertLeave * :set relativenumber
-aug QFClose
-  au!
-  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
-aug END
-
-if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
-  silent !curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs 
-    \https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-" Plugin list
-call plug#begin('~/.local/share/nvim/plugged')
-
-" Theme
-Plug 'phanviet/vim-monokai-pro'
-
-" Plug
-Plug 'airblade/vim-rooter'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Yggdroot/indentLine'
-Plug 'itchyny/lightline.vim'
-Plug 'luochen1990/rainbow'
-Plug 'tpope/vim-commentary'
-Plug 'simnalamburt/vim-mundo'
-Plug 'tpope/vim-repeat'
-Plug 'justinmk/vim-sneak'
-Plug 'tpope/vim-surround'
-Plug 'mg979/vim-visual-multi'
-call plug#end()
-
-
-" scheme
-set background=light
-colorscheme monokai_pro
-
-" Plugin Config
-nnoremap <Leader>p :PlugUpdate<CR>
+lua require('plugins')
+au BufWritePost plugins.lua PackerCompile
 
 " coc.nvim
 " au
@@ -164,12 +126,7 @@ inoremap <silent><expr> <TAB>
       \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " Enter
-if has('patch8.1.1068')
-  " Use `complete_info` if your (Neo)Vim version supports it.
-  inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-else
-  imap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-endif
+inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 " hover
 nnoremap <silent> gh :call <SID>show_documentation()<CR>
 function! s:show_documentation()
@@ -182,55 +139,3 @@ endfunction
 " grep
 nnoremap <Leader>g :CocList grep<CR>
 nnoremap <silent> <Leader>w  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
-
-" indentLine
-let g:indentLine_setConceal = 0
-
-
-" lightline.vim
-let g:lightline = {
-    \  'colorscheme': 'monokai_pro',
-    \  'active': {
-    \    'left': [
-    \      [ 'mode', 'paste' ],
-    \      [ 'ctrlpmark', 'git', 'diagnostic', 'cocstatus', 'filename', 'method' ]
-    \    ],
-    \    'right':[
-    \      [ 'filetype', 'fileencoding', 'lineinfo', 'percent' ],
-    \      [ 'blame' ]
-    \    ],
-    \  },
-    \  'component_function': {
-    \    'cocstatus': 'coc#status' 
-    \  }
-    \  }
-
-
-" nerdcommenter
-let NERDSpaceDelims = 1
-let g:NERDCompactSexyComs = 1
-let g:NERDDefaultAlign = 'left'
-let g:NERDTrimTrailingWhitespace = 1
-
-
-" rainbow
- let g:rainbow_active = 1
- let g:rainbow_conf = {
-    \  'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'],
-    \  'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta'],
-    \  'operators': '_,_',
-    \  'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
-    \  'separately': {
-    \    '*': {},
-    \    'tex': {
-    \    'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
-    \    },
-    \    'vim': {
-    \    'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
-    \    },
-    \  'css': 0,
-    \  }
-    \  }
-
- " rooter
- let g:rooter_patterns = ['.git']
