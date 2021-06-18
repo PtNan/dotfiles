@@ -64,7 +64,7 @@ set wrap
 set clipboard=unnamed
 set syntax=off
 
-
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif                        
 if !isdirectory(expand("~/.local/share/nvim/undo"))
     call mkdir($HOME . "/.local/share/nvim/undo", "p")
 endif
@@ -102,7 +102,6 @@ au BufWritePost plugins.lua PackerCompile
 
 colorscheme material
 let g:material_style = 'darker'
-
 " coc.nvim
 " au
 au! CompleteDone * if pumvisible() == 0 | pclose | endif
@@ -142,3 +141,36 @@ endfunction
 " grep
 nnoremap <Leader>g :CocList grep<CR>
 nnoremap <silent> <Leader>w  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
+
+
+nnoremap <leader>e :NvimTreeToggle<CR>
+" au BufWritePre * :NvimTreeRefresh<CR>
+let g:nvim_tree_icons = {
+    \ 'default': '',
+    \ 'symlink': '',
+    \ 'git': {
+    \   'unstaged': "✗",
+    \   'staged': "✓",
+    \   'unmerged': "",
+    \   'renamed': "➜",
+    \   'untracked': "★",
+    \   'deleted': "",
+    \   'ignored': "◌"
+    \   },
+    \ 'folder': {
+    \   'arrow_open': "",
+    \   'arrow_closed': "",
+    \   'default': "",
+    \   'open': "",
+    \   'empty': "",
+    \   'empty_open': "",
+    \   'symlink': "",
+    \   'symlink_open': "",
+    \   },
+    \   'lsp': {
+    \     'hint': "",
+    \     'info': "",
+    \     'warning': "",
+    \     'error': "",
+    \   }
+    \ }
