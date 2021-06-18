@@ -106,22 +106,13 @@ let g:material_style = 'darker'
 " au
 au! CompleteDone * if pumvisible() == 0 | pclose | endif
 au BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
-" common
-imap <C-j> <Plug>(coc-snippets-expand-jump)
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> [d <Plug>(coc-diagnostic-prev)
-nmap <silent> ]d <Plug>(coc-diagnostic-next)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> rn <plug>(coc-rename)
-" CocList
-nnoremap <Leader>f :<C-u>CocList files<CR>
-nnoremap <Leader><Leader> :<C-u>CocList 
-nnoremap <Leader>m :<C-u>CocList mru<CR>
+"
 " TAB
 function! s:check_back_space() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
@@ -129,22 +120,7 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 " Enter
 inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-" hover
-nnoremap <silent> gh :call <SID>show_documentation()<CR>
-function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  else
-    call CocAction('doHover')
-  endif
-endfunction
-" grep
-nnoremap <Leader>g :CocList grep<CR>
-nnoremap <silent> <Leader>w  :exe 'CocList -I --normal --input='.expand('<cword>').' words'<CR>
 
-
-nnoremap <leader>e :NvimTreeToggle<CR>
-" au BufWritePre * :NvimTreeRefresh<CR>
 let g:nvim_tree_icons = {
     \ 'default': '',
     \ 'symlink': '',

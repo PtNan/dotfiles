@@ -2,7 +2,10 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use 'marko-cerovac/material.nvim'
     use {
-        'neoclide/coc.nvim'
+        'neoclide/coc.nvim',
+        config = function ()
+            require 'coc'
+        end
     }
     use { 
         'lukas-reineke/indent-blankline.nvim', 
@@ -20,7 +23,7 @@ return require('packer').startup(function()
         'blackCauldron7/surround.nvim',
         config = function()
             require "surround".setup {
-                mappings_style = "surround"
+                mappings_style = 'surround'
             }
         end
     }
