@@ -1,6 +1,5 @@
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    use 'marko-cerovac/material.nvim'
     use {
         'neoclide/coc.nvim',
         config = function ()
@@ -38,9 +37,13 @@ return require('packer').startup(function()
         config = function() require 'nvimtree' end
     }
     use {
-        'glepnir/galaxyline.nvim', 
+        'glepnir/galaxyline.nvim',
         config = function() require 'my_line' end,
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
+    }
+    use {
+        'marko-cerovac/material.nvim',
+        config = function() require 'theme' end
     }
 end
 )

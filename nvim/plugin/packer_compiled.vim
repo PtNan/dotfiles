@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/xujingnan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/xujingnan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/xujingnan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/xujingnan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/xujingnan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/Users/nan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/nan/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/nan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/nan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/nan/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -75,80 +75,89 @@ _G.packer_plugins = {
   ["coc.nvim"] = {
     config = { "\27LJ\2\n#\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\bcoc\frequire\0" },
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/coc.nvim"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/coc.nvim"
   },
   ["galaxyline.nvim"] = {
     config = { "\27LJ\2\n'\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\fmy_line\frequire\0" },
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
   ["gitsigns.nvim"] = {
     config = { "\27LJ\2\n#\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\bgit\frequire\0" },
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/gitsigns.nvim"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
   kommentary = {
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/kommentary"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/kommentary"
   },
   ["material.nvim"] = {
+    config = { "\27LJ\2\n%\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\ntheme\frequire\0" },
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/material.nvim"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/material.nvim"
   },
   ["nvim-tree.lua"] = {
     config = { "\27LJ\2\n(\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\rnvimtree\frequire\0" },
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
   },
   ["nvim-treesitter"] = {
     config = { "\27LJ\2\n*\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\15treesitter\frequire\0" },
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["surround.nvim"] = {
     config = { "\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsurround\nsetup\rsurround\frequire\0" },
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/surround.nvim"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/surround.nvim"
   },
   ["vim-repeat"] = {
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/vim-repeat"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/vim-repeat"
   },
   ["vim-sneak"] = {
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/vim-sneak"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/vim-sneak"
   },
   ["vim-visual-multi"] = {
     loaded = true,
-    path = "/Users/xujingnan/.local/share/nvim/site/pack/packer/start/vim-visual-multi"
+    path = "/Users/nan/.local/share/nvim/site/pack/packer/start/vim-visual-multi"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-treesitter
-time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\n*\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\15treesitter\frequire\0", "config", "nvim-treesitter")
-time([[Config for nvim-treesitter]], false)
+-- Config for: surround.nvim
+time([[Config for surround.nvim]], true)
+try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsurround\nsetup\rsurround\frequire\0", "config", "surround.nvim")
+time([[Config for surround.nvim]], false)
 -- Config for: galaxyline.nvim
 time([[Config for galaxyline.nvim]], true)
 try_loadstring("\27LJ\2\n'\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\fmy_line\frequire\0", "config", "galaxyline.nvim")
 time([[Config for galaxyline.nvim]], false)
+-- Config for: nvim-treesitter
+time([[Config for nvim-treesitter]], true)
+try_loadstring("\27LJ\2\n*\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\15treesitter\frequire\0", "config", "nvim-treesitter")
+time([[Config for nvim-treesitter]], false)
+-- Config for: material.nvim
+time([[Config for material.nvim]], true)
+try_loadstring("\27LJ\2\n%\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\ntheme\frequire\0", "config", "material.nvim")
+time([[Config for material.nvim]], false)
 -- Config for: gitsigns.nvim
 time([[Config for gitsigns.nvim]], true)
 try_loadstring("\27LJ\2\n#\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\bgit\frequire\0", "config", "gitsigns.nvim")
@@ -161,10 +170,6 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for coc.nvim]], true)
 try_loadstring("\27LJ\2\n#\0\0\3\0\2\0\0046\0\0\0'\2\1\0B\0\2\1K\0\1\0\bcoc\frequire\0", "config", "coc.nvim")
 time([[Config for coc.nvim]], false)
--- Config for: surround.nvim
-time([[Config for surround.nvim]], true)
-try_loadstring("\27LJ\2\nU\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsurround\nsetup\rsurround\frequire\0", "config", "surround.nvim")
-time([[Config for surround.nvim]], false)
 if should_profile then save_profiles() end
 
 END
