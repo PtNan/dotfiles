@@ -1,13 +1,18 @@
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    --[[ use {
-        'neoclide/coc.nvim',
-        config = function ()
-            require 'coc'
-        end
-    } ]]
+
+    use {
+        'neovim/nvim-lspconfig',
+        config = function() require 'lsp' end
+    }
+
+    use {
+        'hrsh7th/nvim-compe',
+        config = function() require 'my_compe' end
+    }
+
     use { 
-        'lukas-reineke/indent-blankline.nvim', 
+        'lukas-reineke/indent-blankline.nvim',
         branch = 'lua'
     }
     use {

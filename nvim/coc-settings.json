@@ -1,8 +1,0 @@
-{
-    "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSaveFiletypes": [
-        "go",
-        "json",
-        "lua"
-    ]
-}
