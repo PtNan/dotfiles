@@ -1,11 +1,11 @@
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    use {
+    --[[ use {
         'neoclide/coc.nvim',
         config = function ()
             require 'coc'
         end
-    }
+    } ]]
     use { 
         'lukas-reineke/indent-blankline.nvim', 
         branch = 'lua'
