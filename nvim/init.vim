@@ -62,7 +62,7 @@ set wildmenu
 set wildoptions=pum
 set wrap
 set clipboard=unnamed
-set syntax=off
+syntax off
 
 if !isdirectory(expand("~/.local/share/nvim/undo"))
     call mkdir($HOME . "/.local/share/nvim/undo", "p")
@@ -82,38 +82,6 @@ nnoremap <silent> <BS> :noh<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-lua require('plugins')
 au BufWritePost plugins.lua PackerCompile
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif                        
-
-" " coc.nvim
-" " au
-" let g:trigger_size = 0.5 * 1048576
-" augroup hugefile
-"   autocmd!
-"   autocmd BufReadPre *
-"         \ let size = getfsize(expand('<afile>')) |
-"         \ if (size > g:trigger_size) || (size == -2) |
-"         \   echohl WarningMsg | echomsg 'WARNING: altering options for this huge file!' | echohl None |
-"         \   exec 'CocDisable' |
-"         \ else |
-"         \   exec 'CocEnable' |
-"         \ endif |
-"         \ unlet size
-" augroup END
-" au! CompleteDone * if pumvisible() == 0 | pclose | endif
-" au BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
-" "
-" " TAB
-" function! s:check_back_space() abort
-"   let col = col('.') - 1
-"   return !col || getline('.')[col - 1]  =~# '\s'
-" endfunction
-
-" inoremap <silent><expr> <TAB>
-"       \ pumvisible() ? "\<C-n>" :
-"       \ <SID>check_back_space() ? "\<TAB>" :
-"       \ coc#refresh()
-" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-" " Enter
-" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
+lua require('plugins')
