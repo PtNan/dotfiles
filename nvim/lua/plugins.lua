@@ -56,5 +56,9 @@ return require('packer').startup(function()
         requires = {'junegunn/fzf', opt = true},
         config = function() require 'fzf' end
     }
+    use {
+        'ray-x/go.nvim',
+        config = function() require 'gonvim' end
+    }
 end
 )
