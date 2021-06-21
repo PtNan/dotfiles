@@ -62,6 +62,7 @@ set wildmenu
 set wildoptions=pum
 set wrap
 set clipboard=unnamed
+set completeopt=menuone,noselect
 syntax off
 
 if !isdirectory(expand("~/.local/share/nvim/undo"))
@@ -84,4 +85,5 @@ vnoremap > >gv
 
 au BufWritePost plugins.lua PackerCompile
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif                        
+au BufWritePre *.go lua vim.lsp.buf.formatting()
 lua require('plugins')

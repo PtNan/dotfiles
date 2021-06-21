@@ -50,5 +50,11 @@ return require('packer').startup(function()
         'marko-cerovac/material.nvim',
         config = function() require 'theme' end
     }
+    use 'jiangmiao/auto-pairs'
+    use {
+        'junegunn/fzf.vim',
+        requires = {'junegunn/fzf', opt = true},
+        config = function() require 'fzf' end
+    }
 end
 )

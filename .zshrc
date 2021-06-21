@@ -10,7 +10,6 @@ alias nvimconf='nvim ~/.config/nvim/init.vim'
 alias zshconf='nvim ~/.zshrc'
 alias packerconf='nvim ~/.config/nvim/lua/plugins.lua'
 alias rgf='rg --files | rg'
-alias psrg='ps -a | rg'
 alias px='export all_proxy=http://127.0.0.1:7890'
 alias upx='unset all_proxy'
 alias dc='docker compose'
@@ -41,28 +40,44 @@ zinit light-mode for \
 
 zinit ice lucid wait="0" atload='_zsh_autosuggest_start'
 zinit light zsh-users/zsh-autosuggestions
+
 zinit ice lucid wait='0'
 zinit light zsh-users/zsh-completions
+
 zinit ice lucid wait='0' atinit='zpcompinit'
 zinit light zdharma/fast-syntax-highlighting
-zinit as="null" wait="1" lucid from="gh-r" for \
-    mv="*/rg -> rg"   sbin		BurntSushi/ripgrep
+
 zinit light agkozak/zsh-z
 
 zinit snippet OMZ::lib/clipboard.zsh
+
 zinit snippet OMZ::lib/completion.zsh
+
 zinit snippet OMZ::lib/history.zsh
+
 zinit snippet OMZ::lib/key-bindings.zsh
+
 zinit snippet OMZ::lib/git.zsh
+
 zinit snippet OMZ::lib/theme-and-appearance.zsh
+
 zinit snippet OMZ::plugins/git/git.plugin.zsh
+
 zinit snippet OMZ::plugins/golang/golang.plugin.zsh
+
 zinit snippet OMZ::plugins/brew/brew.plugin.zsh
+
 zinit ice as"completion"
 zinit snippet OMZ::plugins/docker/_docker
+
+zinit as"null" wait"2" lucid from"gh-r" for \
+    mv"fd* -> fd" sbin"fd/fd"  @sharkdp/fd \
+    sbin"fzf"  junegunn/fzf
+
+zinit ice from"gh-r" as"program"
+zinit light BurntSushi/ripgrep
+
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
 px
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
