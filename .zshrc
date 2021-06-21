@@ -1,7 +1,7 @@
 # PATH
 export EDITOR="nvim"
 export GOPATH=$HOME/go
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND="git ls-tree -r --name-only HEAD || rg --hidden --files"
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH:$GOBIN
 
@@ -71,11 +71,10 @@ zinit ice as"completion"
 zinit snippet OMZ::plugins/docker/_docker
 
 zinit as"null" wait"2" lucid from"gh-r" for \
-    mv"fd* -> fd" sbin"fd/fd"  @sharkdp/fd \
     sbin"fzf"  junegunn/fzf
 
-zinit ice from"gh-r" as"program"
-zinit light BurntSushi/ripgrep
+zinit as"null" wait"2" lucid from"gh-r" for \
+    sbin"*/rg" BurntSushi/ripgrep
 
 ### End of Zinit's installer chunk
 
