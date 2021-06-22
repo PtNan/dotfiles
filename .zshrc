@@ -80,7 +80,3 @@ zinit as"null" wait"2" lucid from"gh-r" for \
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
-<<<<<<< HEAD
-=======
-
->>>>>>> 95baa3056934e69005c9fbf120ae331002601a33
