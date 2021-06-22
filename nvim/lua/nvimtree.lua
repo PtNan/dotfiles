@@ -1,4 +1,11 @@
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { noremap = true })
+vim.g.nvim_tree_lsp_diagnostics=1
+vim.g.nvim_tree_show_icons = {
+        git= 1,
+        folders= 0,
+        files= 0,
+        folder_arrows= 0
+    }
 vim.g.nvim_tree_icons = {
     default= '',
     symlink= '',
@@ -10,16 +17,6 @@ vim.g.nvim_tree_icons = {
         untracked= "★",
         deleted= "",
         ignored= "◌"
-    },
-    folder= {
-        arrow_open= "",
-        arrow_closed= "",
-        default= "",
-        open= "",
-        empty= "",
-        empty_open= "",
-        symlink= "",
-        symlink_open= "",
     },
     lsp= {
         hint= "",
