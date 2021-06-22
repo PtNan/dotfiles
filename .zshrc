@@ -13,6 +13,7 @@ alias rgf='rg --files | rg'
 alias px='export all_proxy=http://127.0.0.1:7890'
 alias upx='unset all_proxy'
 alias dc='docker compose'
+px
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
@@ -79,4 +80,3 @@ zinit as"null" wait"2" lucid from"gh-r" for \
 ### End of Zinit's installer chunk
 
 eval "$(starship init zsh)"
-px
