@@ -1,5 +1,13 @@
+require 'global'
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
+    use 'lukas-reineke/indent-blankline.nvim'
+    use 'b3nj5m1n/kommentary'
+    use 'tpope/vim-repeat'
+    use 'justinmk/vim-sneak'
+    use 'mg979/vim-visual-multi'
+    use 'jiangmiao/auto-pairs'
+    use 'glepnir/zephyr-nvim'
 
     use {
         'neovim/nvim-lspconfig',
@@ -17,17 +25,11 @@ return require('packer').startup(function()
         config = function() require 'telescope_setting' end
     }
 
-    use { 
-        'lukas-reineke/indent-blankline.nvim',
-    }
     use {
         'lewis6991/gitsigns.nvim',
         requires = {'nvim-lua/plenary.nvim'},
         config = function() require 'git' end
     }
-    use 'b3nj5m1n/kommentary'
-    use 'tpope/vim-repeat'
-    use 'justinmk/vim-sneak'
     use {
         'blackCauldron7/surround.nvim',
         config = function()
@@ -36,7 +38,6 @@ return require('packer').startup(function()
             }
         end
     }
-    use 'mg979/vim-visual-multi'
     use { 
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
@@ -51,11 +52,6 @@ return require('packer').startup(function()
         config = function() require 'line_setting' end,
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
-    use {
-        'marko-cerovac/material.nvim',
-        config = function() require 'theme' end
-    }
-    use 'jiangmiao/auto-pairs'
     use {
         'ray-x/go.nvim',
         config = function() require 'gonvim' end

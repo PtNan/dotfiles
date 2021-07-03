@@ -12,13 +12,17 @@ require('telescope').setup{
             '--smart-case'
         },
         mappings = {
+            i = {
+                ["<c-j>"] = actions.move_selection_next,
+                ["<C-k>"] = actions.move_selection_previous,
+            },
             n = {
                 ["<esc>"] = actions.close,
             }
         },
-        prompt_prefix = "> ",
-        selection_caret = "> ",
-        entry_prefix = "  ",
+        prompt_prefix        = "🔭 ",
+        selection_caret      = "👉 ",
+        entry_prefix         = "  ",
         initial_mode = "insert",
         selection_strategy = "reset",
         sorting_strategy = "descending",

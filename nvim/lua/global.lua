@@ -1,0 +1,22 @@
+_G.font_icon = {
+  error   = ' ';
+  warn    = ' ';
+  hint    = ' ';
+  info    = ' ';
+  modifiy = ' ';
+  add     = ' ';
+  merge   = ' ';
+  renamed = ' ';
+  unknown = ' ';
+  deleted = ' ';
+  ignored = ' ';
+  close   = ' ';
+  edit    = '';
+  line    = '│';
+  line1   = '⏽';
+  branch  = ' ';
+  gear    = ' ';
+  light   = '';
+  check   = '﫠';
+  ok      = ' ';
+}
