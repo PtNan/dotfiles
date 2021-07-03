@@ -83,7 +83,6 @@ nnoremap <silent> <BS> :noh<CR>
 vnoremap < <gv
 vnoremap > >gv
 
-au BufWritePost plugins.lua PackerCompile
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif                        
-au BufWritePre * lua vim.lsp.buf.formatting()
+" au BufWritePre * lua vim.lsp.buf.formatting()
 lua require('plugins')

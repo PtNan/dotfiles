@@ -13,7 +13,6 @@ return require('packer').startup(function()
 
     use { 
         'lukas-reineke/indent-blankline.nvim',
-        branch = 'lua'
     }
     use {
         'lewis6991/gitsigns.nvim',
