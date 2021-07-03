@@ -8,7 +8,13 @@ return require('packer').startup(function()
 
     use {
         'hrsh7th/nvim-compe',
-        config = function() require 'my_compe' end
+        config = function() require 'compe_setting' end
+    }
+
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}},
+        config = function() require 'telescope_setting' end
     }
 
     use { 
@@ -42,7 +48,7 @@ return require('packer').startup(function()
     }
     use {
         'glepnir/galaxyline.nvim',
-        config = function() require 'my_line' end,
+        config = function() require 'line_setting' end,
         requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
     use {
@@ -50,11 +56,6 @@ return require('packer').startup(function()
         config = function() require 'theme' end
     }
     use 'jiangmiao/auto-pairs'
-    use {
-        'junegunn/fzf.vim',
-        requires = {'junegunn/fzf', opt = true},
-        config = function() require 'fzf' end
-    }
     use {
         'ray-x/go.nvim',
         config = function() require 'gonvim' end
