@@ -1,3 +1,5 @@
+_G.var         = vim.api.nvim_set_var
+
 _G.font_icon = {
   error   = ' ';
   warn    = ' ';
@@ -20,3 +22,10 @@ _G.font_icon = {
   check   = '﫠';
   ok      = ' ';
 }
+
+function _G.var_tbl(variable_table)
+  for variable_name, value in pairs(variable_table)
+  do
+    var(variable_name, value)
+  end
+end

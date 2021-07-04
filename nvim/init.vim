@@ -84,5 +84,4 @@ vnoremap < <gv
 vnoremap > >gv
 
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif                        
-" au BufWritePre * lua vim.lsp.buf.formatting()
 lua require('plugins')
