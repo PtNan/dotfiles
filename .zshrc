@@ -6,7 +6,6 @@ export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH:$GOBIN
 
 # alias
-alias nvimconf='nvim ~/.config/nvim/init.vim'
 alias zshconf='nvim ~/.zshrc'
 alias packerconf='nvim ~/.config/nvim/lua/plugins.lua'
 alias rgf='rg --files | rg'
