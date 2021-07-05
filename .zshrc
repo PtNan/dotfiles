@@ -12,7 +12,6 @@ alias rgf='rg --files | rg'
 alias px='export all_proxy=http://127.0.0.1:7890'
 alias upx='unset all_proxy'
 alias dc='docker compose'
-alias ydlm='youtube-dl -f 'bestaudio[ext=m4a]' --proxy socks5://127.0.0.1:7891'
 px
 
 ### Added by Zinit's installer
