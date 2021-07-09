@@ -9,7 +9,7 @@ export PATH=$PATH:$GOPATH:$GOBIN
 alias zshconf='nvim ~/.zshrc'
 alias packerconf='nvim ~/.config/nvim/lua/plugins.lua'
 alias rgf='rg --files | rg'
-alias px='export all_proxy=http://127.0.0.1:7890'
+alias px='export all_proxy=http://127.0.0.1:1087'
 alias upx='unset all_proxy'
 alias dc='docker compose'
 px
