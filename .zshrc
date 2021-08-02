@@ -3,7 +3,8 @@ export EDITOR="nvim"
 export GOPATH=$HOME/go
 export FZF_DEFAULT_COMMAND="git ls-tree -r --name-only HEAD || rg --hidden --files"
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH:$GOBIN
+export HOMEBREW=/opt/homebrew/bin
+export PATH=$PATH:$GOPATH:$GOBIN:$HOMEBREW
 
 # alias
 alias zshconf='nvim ~/.zshrc'
