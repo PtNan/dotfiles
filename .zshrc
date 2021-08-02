@@ -5,6 +5,7 @@ export FZF_DEFAULT_COMMAND="git ls-tree -r --name-only HEAD || rg --hidden --fil
 export GOBIN=$GOPATH/bin
 export HOMEBREW=/opt/homebrew/bin
 export PATH=$PATH:$GOPATH:$GOBIN:$HOMEBREW
+# export GOPROXY=https://goproxy.io,direct
 
 # alias
 alias zshconf='nvim ~/.zshrc'
@@ -13,6 +14,8 @@ alias rgf='rg --files | rg'
 alias px='export all_proxy=http://127.0.0.1:7890'
 alias upx='unset all_proxy'
 alias dc='docker compose'
+alias kins='/bin/bash -c "$(curl -fsSL http://kratos.bilibili.co/x/kratos/install.sh)"'
+alias bins='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
 px
 
 ### Added by Zinit's installer
