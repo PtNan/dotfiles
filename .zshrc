@@ -16,7 +16,6 @@ alias upx='unset all_proxy'
 alias dc='docker compose'
 alias kins='/bin/bash -c "$(curl -fsSL http://kratos.bilibili.co/x/kratos/install.sh)"'
 alias bins='/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'
-px
 
 ### Added by Zinit's installer
 if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
