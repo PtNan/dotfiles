@@ -1,10 +1,9 @@
 # PATH
 export EDITOR="nvim"
-export GOPATH=$HOME/go
 export FZF_DEFAULT_COMMAND="git ls-tree -r --name-only HEAD || rg --hidden --files"
-export GOBIN=$GOPATH/bin
 export HOMEBREW=/opt/homebrew/bin
-export PATH=$PATH:$GOPATH:$GOBIN:$HOMEBREW
+export GOPATH=$HOME/go
+export PATH=$PATH:$HOMEBREW:$GOPATH:$GOPATH/bin
 # export GOPROXY=https://goproxy.io,direct
 
 # alias
@@ -24,6 +23,10 @@ if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
         print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
 
+if [[ ! -d $HOME/.g ]]; then
+    curl -sSL https://raw.githubusercontent.com/voidint/g/master/install.sh | bash
+fi
+
 source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
@@ -34,9 +37,7 @@ zinit light-mode for \
     zinit-zsh/z-a-as-monitor \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node \
-    OMZ::plugins/extract\
     OMZ::plugins/safe-paste \
-    OMZ::plugins/sudo \
     zdharma/history-search-multi-word
 
 zinit ice lucid wait="0" atload='_zsh_autosuggest_start'
@@ -66,7 +67,17 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 
 zinit snippet OMZ::plugins/golang/golang.plugin.zsh
 
-zinit snippet OMZ::plugins/brew/brew.plugin.zsh
+zinit wait lucid for \
+  atinit"ZINIT[COMPINIT_OPTS]=-C; zicompinit; zicdreplay" \
+    zdharma/fast-syntax-highlighting \
+  blockf \
+    zsh-users/zsh-completions \
+  id-as'brew-zsh-site-functions' run-atpull \
+    atclone'zinit creinstall -q $(brew --prefix)/share/zsh/site-functions' \
+    atpull'zinit creinstall -q $(brew --prefix)/share/zsh/site-functions' \
+    zdharma/null \
+  atload"!_zsh_autosuggest_start" \
+    zsh-users/zsh-autosuggestions
 
 zinit ice as"completion"
 zinit snippet OMZ::plugins/docker/_docker
@@ -96,3 +107,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# ===== set g environment variables =====
+export GOROOT="${HOME}/.g/go"
+export PATH="${HOME}/bin:${HOME}/.g/go/bin:$PATH"
+unalias g
+# ===== set g environment variables =====
+export GOROOT="${HOME}/.g/go"
+export PATH="${HOME}/bin:${HOME}/.g/go/bin:$PATH"
+export G_MIRROR=https://golang.google.cn/dl/
