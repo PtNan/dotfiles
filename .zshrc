@@ -107,11 +107,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# ===== set g environment variables =====
-export GOROOT="${HOME}/.g/go"
-export PATH="${HOME}/bin:${HOME}/.g/go/bin:$PATH"
 unalias g
 # ===== set g environment variables =====
 export GOROOT="${HOME}/.g/go"
 export PATH="${HOME}/bin:${HOME}/.g/go/bin:$PATH"
-export G_MIRROR=https://golang.google.cn/dl/
