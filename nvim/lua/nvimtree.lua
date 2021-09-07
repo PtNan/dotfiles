@@ -11,8 +11,6 @@ var_tbl {
   nvim_tree_special_files      = { 'README.md', 'Makefile', 'MAKEFILE' },
 
   nvim_tree_icons              = {
-    default     = '',
-    symlink     = '',
     git         = {
       unstaged  = font_icon.modifiy,
       staged    = font_icon.add,
@@ -22,14 +20,6 @@ var_tbl {
       deleted   = font_icon.deleted,
       ignored   = font_icon.ignored
     },
-    folder      = {
-      default      = "",
-      open         = "",
-      empty        = "",
-      empty_open   = "",
-      symlink      = "",
-      symlink_open = "",
-    }
   }
 }
 

@@ -1,24 +1,18 @@
 " Basics
-set ambiwidth=double
 set autoindent
 set autoread
-set autowrite
 set cmdheight=2
 set diffopt+=vertical
-set encoding=UTF-8
 set expandtab
 set fileencodings=utf8
 set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
-set hidden
 set history=256
-set ignorecase
 set incsearch 
 set nobackup
 set nowritebackup
 set noswapfile
 set lazyredraw
 set magic
-set matchtime=2
 set mouse=a
 set mousehide
 set noerrorbells
@@ -27,26 +21,22 @@ set noshowcmd
 set nospell
 set novisualbell
 set nrformats=alpha,octal,hex
-set pumheight=15
+set pumheight=5
 set ruler
 set relativenumber
 set shell=/bin/sh
 set shiftwidth=4
-set shortmess=atI
-set shortmess+=c
+set shortmess=atIc
 set showmatch
 set showtabline=1
 set smartcase
 set smarttab
-set signcolumn=yes
 set smartindent
 set splitbelow
 set splitright
-set switchbuf=useopen
 set tabstop=4
 set termencoding=utf-8
 set termguicolors
-set title
 set t_ti= t_te=
 set t_vb=
 set ttyfast
@@ -60,7 +50,6 @@ set wildignore=*.so,*.swp,*.bak,*.pyc,*.pyo,*.class,*.zip
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 set wildmenu
 set wildoptions=pum
-set wrap
 set clipboard=unnamed
 set completeopt=menuone,noselect
 syntax off
@@ -72,13 +61,8 @@ endif
 let mapleader = "\<Space>"
 inoremap jk _
 nnoremap U <C-r>
-nnoremap <silent> n nzz
-nnoremap <silent> N Nzz
-nnoremap <silent> * *zz
-nnoremap <silent> # #zz
-nnoremap <silent> j gjzz
-nnoremap <silent> k gkzz
-nnoremap <silent> g* g*zz
+nnoremap <silent> j gj
+nnoremap <silent> k gk
 nnoremap <silent> <BS> :noh<CR>
 vnoremap < <gv
 vnoremap > >gv
