@@ -22,15 +22,21 @@ var_tbl {
       ignored   = font_icon.ignored
     },
     folder      = {
-       arrow_open= "",
-       arrow_closed= "",
-       default= "",
-       open= "",
-       empty= "",
-       empty_open= "",
-       symlink= "",
-       symlink_open= "",
+      arrow_open= "",
+      arrow_closed= "",
+      default= "",
+      open= "",
+      empty= "",
+      empty_open= "",
+      symlink= "",
+      symlink_open= "",
     },
+    lsp        = {
+      hint     = font_icon.hint,
+      info     = font_icon.info,
+      warning  = font_icon.warn,
+      error    = font_icon.error,
+    }
   }
 }
 
