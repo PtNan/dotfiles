@@ -5,13 +5,13 @@ _G.font_icon = {
   warn    = ' ';
   hint    = ' ';
   info    = ' ';
-  modifiy = ' ';
-  add     = ' ';
+  modifiy = '✗';
+  add     = '✓';
   merge   = ' ';
-  renamed = ' ';
-  unknown = ' ';
+  renamed = '➜';
+  unknown = '★';
   deleted = ' ';
-  ignored = ' ';
+  ignored = '◌';
   close   = ' ';
   edit    = '';
   line    = '│';
@@ -19,8 +19,6 @@ _G.font_icon = {
   branch  = ' ';
   gear    = ' ';
   light   = '';
-  check   = '﫠';
-  ok      = ' ';
 }
 
 function _G.var_tbl(variable_table)

@@ -9,8 +9,9 @@ var_tbl {
   nvim_tree_width_allow_resize = 1,
   nvim_tree_ignore             = { ".git", ".cache", ".idea", ".DS_Store" },
   nvim_tree_special_files      = { 'README.md', 'Makefile', 'MAKEFILE' },
-
   nvim_tree_icons              = {
+    default     = '',
+    symlink     = '',
     git         = {
       unstaged  = font_icon.modifiy,
       staged    = font_icon.add,
@@ -19,6 +20,16 @@ var_tbl {
       untracked = font_icon.unknown,
       deleted   = font_icon.deleted,
       ignored   = font_icon.ignored
+    },
+    folder      = {
+       arrow_open= "",
+       arrow_closed= "",
+       default= "",
+       open= "",
+       empty= "",
+       empty_open= "",
+       symlink= "",
+       symlink_open= "",
     },
   }
 }

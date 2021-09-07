@@ -21,7 +21,7 @@ set noshowcmd
 set nospell
 set novisualbell
 set nrformats=alpha,octal,hex
-set pumheight=5
+set pumheight=15
 set ruler
 set relativenumber
 set shell=/bin/sh
