@@ -1,4 +1,3 @@
 # Dotfile
 - nvim
 - zsh
-- alacritty
