@@ -7,6 +7,7 @@ set expandtab
 set fileencodings=utf8
 set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 set history=256
+set ignorecase
 set incsearch 
 set nobackup
 set nowritebackup
@@ -48,6 +49,7 @@ set undolevels=1000
 set virtualedit=onemore
 set wildignore=*.so,*.swp,*.bak,*.pyc,*.pyo,*.class,*.zip
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+set wildignorecase
 set wildmenu
 set wildoptions=pum
 set clipboard=unnamed
