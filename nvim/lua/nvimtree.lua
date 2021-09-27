@@ -1,43 +1,32 @@
-local tree_cb = require "nvim-tree.config".nvim_tree_callback
-vim.g.nvim_tree_lsp_diagnostics=1
-var_tbl {
-  nvim_tree_width              = 40,
-  nvim_tree_indent_markers     = 1,
-  nvim_tree_follow             = 1,
-  nvim_tree_quit_on_open       = 1,
-  nvim_tree_git_hl             = 1,
-  nvim_tree_width_allow_resize = 1,
-  nvim_tree_ignore             = { ".git", ".cache", ".idea", ".DS_Store" },
-  nvim_tree_special_files      = { 'README.md', 'Makefile', 'MAKEFILE' },
-  nvim_tree_icons              = {
-    default     = '',
-    symlink     = '',
-    git         = {
-      unstaged  = font_icon.modifiy,
-      staged    = font_icon.add,
-      unmerged  = font_icon.merge,
-      renamed   = font_icon.renamed,
-      untracked = font_icon.unknown,
-      deleted   = font_icon.deleted,
-      ignored   = font_icon.ignored
-    },
-    folder      = {
-      arrow_open= "",
-      arrow_closed= "",
-      default= "",
-      open= "",
-      empty= "",
-      empty_open= "",
-      symlink= "",
-      symlink_open= "",
-    },
-    lsp        = {
-      hint     = font_icon.hint,
-      info     = font_icon.info,
-      warning  = font_icon.warn,
-      error    = font_icon.error,
-    }
+require'nvim-tree'.setup {
+  -- disables netrw completely
+  disable_netrw       = true,
+  -- hijack netrw window on startup
+  hijack_netrw        = true,
+  -- open the tree when running this setup function
+  open_on_setup       = false,
+  -- will not open on setup if the filetype is in this list
+  ignore_ft_on_setup  = {},
+  -- closes neovim automatically when the tree is the last **WINDOW** in the view
+  auto_close          = false,
+  -- opens the tree when changing/opening a new tab if the tree wasn't previously opened
+  open_on_tab         = false,
+  -- hijack the cursor in the tree to put it at the start of the filename
+  hijack_cursor       = false,
+  -- updates the root directory of the tree on `DirChanged` (when your run `:cd` usually) 
+  update_cwd          = false,
+  -- show lsp diagnostics in the signcolumn
+  lsp_diagnostics     = false,
+  -- update the focused file on `BufEnter`, un-collapses the folders recursively until it finds the file
+  update_focused_file = {
+    -- enables the feature
+    enable      = false,
+    -- update the root directory of the tree to the one of the folder containing the file if the file is not under the current root directory
+    -- only relevant when `update_focused_file.enable` is true
+    update_cwd  = false,
+    -- list of buffer names / filetypes that will not update the cwd if the file isn't found under the current root directory
+    -- only relevant when `update_focused_file.update_cwd` is true and `update_focused_file.enable` is true
+    ignore_list = {}
   }
 }
-
 vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { noremap = true })
