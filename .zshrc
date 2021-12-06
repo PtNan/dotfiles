@@ -9,8 +9,9 @@ export NIXPKGS_ALLOW_UNFREE=1
 # export GOPROXY=https://goproxy.io,direct
 
 # alias
-alias zshconf='nvim ~/.zshrc'
-alias packerconf='nvim ~/.config/nvim/lua/plugins.lua'
+alias zshconf='nvim $HOME/dotfiles/.zshrc'
+alias nixconf='nvim $HOME/dotfiles/nixpkgs/home.nix'
+alias packerconf='nvim $HOME/dotfiles/nvim/lua/plugins.lua'
 alias rgf='rg --files | rg'
 alias dc='docker compose'
 
