@@ -17,7 +17,7 @@ alias dc='docker compose'
 
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    ln -Fhnvs ~/dotfiles/nvim ~/.config/nvim
+    ln -Fhnvs ~/dotfiles/nvim/lua ~/.config/nvim/lua
     ln -Fhnvs ~/dotfiles/.zshrc ~/.zshrc
 fi
 
