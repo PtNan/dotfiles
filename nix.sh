@@ -1,5 +1,6 @@
 sh <(curl -L https://nixos.org/nix/install) --darwin-use-unencrypted-nix-store-volume
 sudo nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+sudo nix-channel --add https://channels.nixos.org/nixpkgs-unstable
 sudo nix-channel --update
 nix-shell '<home-manager>' -A install
 ln -Fhnvs ~/dotfiles/nixpkgs ~/.config/nixpkgs

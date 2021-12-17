@@ -5,10 +5,6 @@
   home.homeDirectory = "/Users/ptnan";
 
   programs.home-manager.enable = true;
-  programs.vscode = {
-        enable = true;
-        package = pkgs.vscode;
-  };
 
   home.packages = [
     pkgs.ripgrep
