@@ -1,3 +1,2 @@
 # Dotfile
-- nvim
 - zsh
