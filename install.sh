@@ -1,1 +1,1 @@
-ln -Fhnvs ~/dotfiles/.zshrc ~/.zshrc
+ln -Fnvs ~/dotfiles/.zshrc ~/.zshrc
